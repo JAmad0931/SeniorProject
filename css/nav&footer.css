@@ -1,0 +1,44 @@
+html {
+    font-family: fantasy,'Courier New', Courier, monospace;
+    font-size: larger;
+    background-color: bisque;
+}
+/*--------------------Navbar styling---------------------------------*/
+.flex-container {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.headerlogo, .innerHeaderLinks > a {
+    color: aliceblue;
+    padding-left: 50px;
+    text-decoration: none;
+}
+/*-------------------Slideshow styling begins----------------------*/
+.mySlides {
+    display: none;
+}
+img {
+    vertical-align: middle;
+}
+
+.slideshow-container {
+    background-color: red;
+    box-sizing: border-box;
+    max-width: 1000px;
+    padding: 20px;
+    margin-top: 60px;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 25%;
+    width: auto;
+    padding: 16px;
+}

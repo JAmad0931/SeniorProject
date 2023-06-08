@@ -12,23 +12,81 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
         <link rel="manifest" href="assets/site.webmanifest">
 
+        <link rel="stylesheet" href="/css/nav&footer.css">
+
         <title>My Personal Collection</title>
     </head>
     <body>
-        <nav>
+        <div class="flex-container">
+            <div class="headerlogo">
+                <img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;">
+            </div>
+            <div class="innerHeaderLinks">
+                <a href="#">My Personal Collection</a>
+                <a href="#">Legos</a>
+                <a href="#">Funkos</a>
+                <a href="#">Manga</a>
+                <a href="#">Action Figures</a>
+            </div>
+            <div class="rightHeaderLinks">
+
+            </div>
+        </div>
+<!-------------------------------Slideshow images------------------------------------------------------->        
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="numberText">1 / 4</div>
+                <img src="assets/91262.png" class=".responsive" style="max-width: 200px">
+            </div>
+            <div class="mySlides">
+                <div class="numberText">2 / 4</div>
+                <img src="assets/funko-logo.jpg" class=".responsive" style="max-width: 200px">
+            </div>
+            <div class="mySlides">
+                <div class="numberText">3 / 4</div>
+                <img src="assets/bam.png" class=".responsive" style="max-width: 200px">
+            </div>
+            <div class="mySlides">
+                <div class="numberText">1 / 3</div>
+                <img src="assets/figma.jpg" class=".responsive" style="max-width: 200px">
+                <br>
+                <img src="assets/shfiguarts.jpg" class=".responsive" style="max-width: 200px">
+            </div>
+<!---------------------------------------Next & previous buttons for slideshow------------------------------------------------------------------->
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a> <!--Left arrow-->
+            <a class="next" onclick="plusSlides(1)">&#10095</a>  <!--Right arrow-->
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+              </div>
+        </div>
+
+    </body>
+    <!---------------------------------Start of Footer---------------------------->
+    <footer>
+        <div>
+            <h4>Navigation</h4>
             <ul>
-                <li><a href="index.html"><img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;"> My Personal Collection</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Legos</a></li>
                 <li><a href="#">Funkos</a></li>
-                <li><a href="#">Manga</a></li>
                 <li><a href="#">Action Figures</a></li>
             </ul>
-        </nav>
-        
-
-    </body>
-    <footer>
-
+        </div>
+        <div>
+            <h4>My Personal Collection</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Account</h4>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
     </footer>
 </html>
