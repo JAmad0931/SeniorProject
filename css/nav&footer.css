@@ -1,0 +1,100 @@
+html {
+    font-family: fantasy,'Courier New', Courier, monospace;
+    font-size: larger;
+    background-color: rgb(0,0,0);
+}
+body {
+    margin: 0px;
+}
+/*--------------------Navbar styling---------------------------------*/
+.flex-container {
+    background-color: rgb(31, 31, 31);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 5;
+}
+.headerlogo, .innerHeaderLinks > a {
+    color: rgb(141, 141, 141);
+    padding-left: 50px;
+    text-decoration: none;
+}
+.innerHeaderLinks>a:hover{
+    color: rgb(255,255,255);
+}
+/*--------------------Drop Down Menu Styling--------------------------*/
+.rightHeaderLinks{
+    margin-left: 50rem;
+}
+.dropbtn{
+    background-color: rgb(31, 31, 31);
+    border: 2px solid rgb(31, 31, 31);
+    cursor: pointer; 
+    border: 0;
+}
+.dropbtn:hover{
+    background-color: rgb(255, 255, 255);
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: rgb(31,31,31);
+    min-width: 160px;
+    z-index: 3; 
+}
+.dropdown-content a {
+    color: rgb(141, 141, 141);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+.dropdown-content a:hover {
+    color: rgb(255, 255, 255);
+}
+.show {
+    display:block;
+}
+/*--------------------Footer Styling--------------------------------*/
+footer{
+    background: linear-gradient(rgb(0,0,0), rgb(31,31,31));
+    padding-bottom: 50px;
+}
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footerNav{
+    padding: 30px;
+}
+ul, li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li, a {
+    font-size: medium;
+    text-decoration: none;
+    color: rgb(141,141,141);
+    padding-bottom: .5rem;
+}
+li > a:hover{
+    color: rgb(255,255,255);
+    text-decoration-line: underline;
+}
+h4{
+    color: rgb(250, 250, 250);
+    font-weight: lighter;
+}
+hr { 
+    color: rgb(141, 141, 141);
+    height: .1rem;
+    margin-left: 30rem;
+    margin-right: 30rem;
+    border-style: inset hidden hidden hidden;
+  } 
