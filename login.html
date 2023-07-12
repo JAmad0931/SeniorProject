@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Collectables, funkos, legos, manga, action figures">
+    <meta name="decription" content="Tracker that helps keep track of collectables such as funkos, legos, manga, & action figures">
+    <meta name="author" content="Josue Amador">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <link rel="stylesheet" href="/css/nav&footer.css">
+    <link rel="stylesheet" href="/css/registration&login.css">
+    <script src="/javascript/dropDown.js"></script>
+
+    <title>Log In</title>
+</head>
+<body>
+    <!----------------------Start of Navbar----------------------------------->
+    <div class="flex-container">
+        <div class="headerlogo">
+            <img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;">
+        </div>
+        <div class="innerHeaderLinks">
+            <a href="index.html">My Personal Collection</a>
+            <a href="legoPage.html">Lego</a>
+            <a href="funkoPage.html">Funko</a>
+            <a href="#">Manga</a>
+            <a href="#">Action Figures</a>
+        </div>
+        <div class="rightHeaderLinks">
+            <img src="assets/user.png" style="max-width: 32px" onclick="dropDownFunc()" class="dropbtn">
+            <div id="myDropdown" class="dropdown-content">
+                <a href="registration.html">Create Account</a>
+                <a href="login.html">Log In</a>
+            </div>
+        </div>
+    </div>
+    <!--------------------------Start of the form------------------------>
+   
+    <form action="" method="post" id="registration">
+        <h1>Log In</h1>
+         <div class="login-form-container">
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" required autofocus autocomplete="on">
+            <br>
+            <br>
+            <label for="pwd">Password</label>
+            <br>
+            <input type="password" id="pwd" min="8" required>
+            <p id="forgotPass">Forgot Password?</p>
+        </div>
+        <div class="submitBtn">
+            <input type="submit" form="registration" value="Log In">
+        </div>
+    </form>
+    <p id="accountTxt">No Account? <a href="registration.html" id="loginTxt">Create One</a></p>
+    
+</body>
+<!---------------------------------Start of Footer---------------------------->
+<footer>
+    <div class="footer-container">
+        <div class="footerNav">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="legoPage.html">Lego</a></li>
+                <li><a href="funkoPage.html">Funko</a></li>
+                <li><a href="#">Manga</a></li>
+                <li><a href="#">Action Figures</a></li>
+            </ul>
+        </div>
+        <div class="footerNav">
+            <h4>My Personal Collection</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footerNav">
+            <h4>Account</h4>
+            <ul>
+                <li><a href="registration.html">Create Account</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+</footer>
+</html>
