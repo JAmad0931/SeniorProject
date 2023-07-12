@@ -12,23 +12,99 @@
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
         <link rel="manifest" href="assets/site.webmanifest">
 
+        <link rel="stylesheet" href="/css/nav&footer.css">
+        <link rel="stylesheet" href="/css/slideshow.css">
+        <script src="/javascript/slideshow.js" async></script> 
+        <script src="/javascript/dropDown.js"></script>
+
+        <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
+
         <title>My Personal Collection</title>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="index.html"><img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;"> My Personal Collection</a></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Legos</a></li>
-                <li><a href="#">Funkos</a></li>
-                <li><a href="#">Manga</a></li>
-                <li><a href="#">Action Figures</a></li>
-            </ul>
-        </nav>
-        
+        <!----------------------Start of Navbar----------------------------------->
+        <div class="flex-container">
+            <div class="headerlogo">
+                <img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;">
+            </div>
+            <div class="innerHeaderLinks">
+                <a href="index.html">My Personal Collection</a>
+                <a href="legoPage.html">Lego</a>
+                <a href="funkoPage.html">Funko</a>
+                <a href="mangaPage.html">Manga</a>
+                <a href="actionFigurePage.html">Action Figures</a>
+            </div>
+            <div class="rightHeaderLinks">
+                <img src="assets/user.png" style="max-width: 32px" onclick="dropDownFunc()" class="dropbtn">
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="registration.html">Create Account</a>
+                    <a href="login.html">Log In</a>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------Slideshow images------------------------------------------------------->
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <div class="numberText">1 / 4</div>
+                <img src="assets/91262.png">
+            </div>
+            <div class="mySlides">
+                <div class="numberText">2 / 4</div>
+                <img src="assets/funko-logo.jpg">
+            </div>
+            <div class="mySlides">
+                <div class="numberText">3 / 4</div>
+                <img src="assets/bam.png" class="center">
+            </div>
+            <div class="mySlides">
+                <div class="numberText">4 / 4</div>
+                <img src="assets/figma.jpg" class="center">
+                <img src="assets/shfiguarts.jpg" class="center">
+            </div>
+        </div>
+        <!---------------------------------------Next & previous buttons for slideshow--------------------------->
+        <a class="prev" onclick="plusSlides(-1)">&#10094</a> <!--Left arrow-->
+        <a class="next" onclick="plusSlides(1)">&#10095</a>  <!--Right arrow-->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <br>
+        <br>
+        <br>
 
     </body>
+    <!-------------------------------------------Start of Footer-------------------------------------------->
     <footer>
-
+        <div class="footer-container">
+            <div class="footerNav">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="legoPage.html">Lego</a></li>
+                    <li><a href="funkoPage.html">Funko</a></li>
+                    <li><a href="mangaPage.html">Manga</a></li>
+                    <li><a href="actionFigurePage.html">Action Figures</a></li>
+                </ul>
+            </div>
+            <div class="footerNav">
+                <h4>My Personal Collection</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footerNav">
+                <h4>Account</h4>
+                <ul>
+                    <li><a href="registration.html">Create Account</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
     </footer>
+
 </html>
