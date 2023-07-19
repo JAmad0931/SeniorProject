@@ -21,15 +21,27 @@
 <body>
     <!----------------------Start of Navbar----------------------------------->
     <div class="flex-container">
+        <div class="leftInnerLinks">
+            <img src="assets/menu.png" style="max-width: 32px" class="dropbtn" onclick="burgerDropdown()">
+            <div id="burgerDropdown" class="burgerDropdown-content">
+                <a href="index.html">My Personal Collection</a>
+                <a href="legoPage.html">Lego</a>
+                <a href="funkoPage.html">Funko</a>
+                <a href="mangaPage.html">Manga</a>
+                <a href="actionFigurePage.html">Action Figures</a>
+            </div>
+        </div>
         <div class="headerlogo">
             <img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;">
         </div>
         <div class="innerHeaderLinks">
-            <a href="index.html">My Personal Collection</a>
-            <a href="legoPage.html">Lego</a>
-            <a href="funkoPage.html">Funko</a>
-            <a href="#">Manga</a>
-            <a href="#">Action Figures</a>
+            <div id="myLinks">
+                <a href="index.html">My Personal Collection</a>
+                <a href="legoPage.html">Lego</a>
+                <a href="funkoPage.html">Funko</a>
+                <a href="mangaPage.html">Manga</a>
+                <a href="actionFigurePage.html">Action Figures</a>
+            </div>
         </div>
         <div class="rightHeaderLinks">
             <img src="assets/user.png" style="max-width: 32px" onclick="dropDownFunc()" class="dropbtn">
@@ -40,26 +52,26 @@
         </div>
     </div>
     <!--------------------------Start of the form------------------------>
-   
-    <form action="" method="post" id="registration">
-        <h1>Create Account</h1>
-         <div class="form-container">
-            <label for="email">Email</label>
-            <br>
-            <input type="email" id="email" required autofocus autocomplete="on">
-            <br>
-            <br>
-            <label for="pwd">Password</label>
-            <br>
-            <input type="password" id="pwd" min="8" required>
-            <p id="passwordDesc">Use at least 8 characters, do not use empty spaces.</p>
-        </div>
-        <div class="submitBtn">
-            <input type="submit" form="registration" value="Create Account">
-        </div>
-    </form>
-    <p id="accountTxt">Already have an account? <a href="login.html" id="loginTxt">Log In</a></p>
-    
+    <h1>Create Account</h1>
+   <section>
+        <form action="" method="post" id="registration">
+            <div class="form-container">
+                <label for="email">Email</label>
+                <br>
+                <input type="email" id="email" required autofocus autocomplete="on">
+                <br>
+                <br>
+                <label for="pwd">Password</label>
+                <br>
+                <input type="password" id="pwd" min="8" required>
+                <p id="passwordDesc">Use at least 8 characters, do not use empty spaces.</p>
+            </div>
+            <div class="submitBtn">
+                <input type="submit" form="registration" value="Create Account">
+            </div>
+        </form>
+</section>
+<p id="accountTxt">Already have an account? <a href="login.html" id="loginTxt">Log In</a></p>
 </body>
 <!---------------------------------Start of Footer---------------------------->
 <footer>
@@ -70,8 +82,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="legoPage.html">Lego</a></li>
                 <li><a href="funkoPage.html">Funko</a></li>
-                <li><a href="#">Manga</a></li>
-                <li><a href="#">Action Figures</a></li>
+                <li><a href="mangaPage.html">Manga</a></li>
+                <li><a href="actionFigurePage.html">Action Figures</a></li>
             </ul>
         </div>
         <div class="footerNav">

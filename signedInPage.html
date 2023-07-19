@@ -6,17 +6,18 @@
     <meta name="decription" content="Tracker that helps keep track of collectables such as funkos, legos, manga, & action figures">
     <meta name="author" content="Josue Amador">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="assets/site.webmanifest">
 
     <link rel="stylesheet" href="/css/nav&footer.css">
-    <link rel="stylesheet" href="/css/registration&login.css">
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/signedIn.css">
     <script src="/javascript/dropDown.js"></script>
 
-    <title>Log In</title>
+    <title>Account</title>
 </head>
 <body>
     <!----------------------Start of Navbar----------------------------------->
@@ -51,30 +52,76 @@
             </div>
         </div>
     </div>
-    <!--------------------------Start of the form------------------------>
-   <section>
-        <form action="" method="post" id="registration">
-            <h1>Log In</h1>
-            <div class="login-form-container">
-                <label for="email">Email</label>
-                <br>
-                <input type="email" id="email" required autofocus autocomplete="on">
-                <br>
-                <br>
-                <label for="pwd">Password</label>
-                <br>
-                <input type="password" id="pwd" min="8" required>
-                <p id="forgotPass">Forgot Password?</p>
+    <h1>My Personal Collection</h1>
+    <div class="buttons-container">
+        <button class="collection-buttons">Lego Collection</button>
+        <button class="collection-buttons">Funko Collection</button>
+        <button class="collection-buttons">Manga Collection</button>
+        <button class="collection-buttons">Action Figure Collection</button>
+    </div>
+    <section>
+        <!-------------------------------Start of collection items available for Lego---------------------------->
+        <div class="signedInproduct-container"> 
+            <div class="productBackground">
+                <img src="assets/lego/ninjago/1.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Ninja Ambush <br> Set #: 2258</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
             </div>
-            <div class="submitBtn">
-                <input type="submit" form="registration" value="Log In">
+            <div class="productBackground">
+                <img src="assets/lego/ninjago/2.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Skull Motorbike <br> Set #: 2259</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
             </div>
-        </form>
-</section>
-<p id="accountTxt">No Account? <a href="registration.html" id="loginTxt">Create One</a></p>
+            <div class="productBackground">
+                <img src="assets/lego/ninjago/3.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Ice Dragon Attack <br> Set #: 2260</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground">
+                <img src="assets/lego/ninjago/4.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Turbo Shredder <br> Set #: 2263</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground">
+                <img src="assets/lego/ninjago/5.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Spinjitzu Dojo <br> Set #: 2504</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </section>
 </body>
-<!---------------------------------Start of Footer---------------------------->
-<footer>
+<!-------------------------------------------Start of Footer-------------------------------------------->
+<footer class="legoFooterSpacing">
     <div class="footer-container">
         <div class="footerNav">
             <h4>Navigation</h4>

@@ -19,13 +19,43 @@ body {
     align-items: center;
     z-index: 5;
 }
-.headerlogo, .innerHeaderLinks > a {
+.leftInnerLinks {
+    display: none;
+}
+.headerlogo, #myLinks > a {
     color: rgb(141, 141, 141);
     padding-left: 50px;
     text-decoration: none;
 }
-.innerHeaderLinks>a:hover{
+#myLinks>a:hover{
     color: rgb(255,255,255);
+}
+@media screen and (max-width: 824px) {
+    .flex-container #myLinks{
+        display: none;
+    }
+    .leftInnerLinks {
+        display: block;
+    }
+    .flex-container #testLinks {
+        display: none;
+    }
+    .burgerDropdown-content {
+        display: none;
+        position: absolute;
+        background-color: rgb(31,31,31);
+        min-width: 300px;
+        margin-top: 12.4px;
+        z-index: 3;
+    }
+    .burgerDropdown-content a{
+        display: block;
+        padding: 10px 20px;
+    }
+   
+    .burgerDropdown-content a:hover {
+        color: rgb(255,255,255);
+    }
 }
 /*--------------------Drop Down Menu Styling--------------------------*/
 .rightHeaderLinks{
@@ -45,6 +75,7 @@ body {
     position: absolute;
     background-color: rgb(31,31,31);
     min-width: 160px;
+    margin-top: 12.4px;
     z-index: 3; 
 }
 .dropdown-content a {
@@ -59,10 +90,45 @@ body {
 .show {
     display:block;
 }
+/*---------------------Media Queries for the Navbar-------------------------*/
+@media screen and (max-width: 1740px){
+    .rightHeaderLinks{
+        margin-left: 40rem;
+    }
+}
+@media screen and (max-width: 1545px){
+    .rightHeaderLinks{
+        margin-left: 30rem;
+    }
+}
+@media screen and (max-width: 1355px){
+    .rightHeaderLinks{
+        margin-left: 20rem;
+    }
+}
+@media screen and (max-width: 1165px){
+    .rightHeaderLinks{
+        margin-left: 10rem;
+    }
+}
+@media screen and (max-width: 970px){
+    .rightHeaderLinks{
+        margin-left: 5rem;
+    }
+}
+@media screen and (max-width: 875px){
+    .rightHeaderLinks{
+        margin-left: 2rem;
+    }
+}
 /*--------------------Footer Styling--------------------------------*/
 footer{
     background: linear-gradient(rgb(0,0,0), rgb(31,31,31));
     padding-bottom: 50px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    min-width: 600px;
+    min-height: 600px;
 }
 .footer-container{
     display: flex;

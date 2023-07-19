@@ -18,21 +18,34 @@
         <script src="/javascript/dropDown.js"></script>
 
         <a href="https://www.flaticon.com/free-icons/user" title="user icons">User icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/hamburger" title="hamburger icons">Hamburger icons created by bsd - Flaticon</a>
 
         <title>My Personal Collection</title>
     </head>
     <body>
         <!----------------------Start of Navbar----------------------------------->
         <div class="flex-container">
+            <div class="leftInnerLinks">
+                <img src="assets/menu.png" style="max-width: 32px" class="dropbtn" onclick="burgerDropdown()">
+                <div id="burgerDropdown" class="burgerDropdown-content">
+                    <a href="index.html">My Personal Collection</a>
+                    <a href="legoPage.html">Lego</a>
+                    <a href="funkoPage.html">Funko</a>
+                    <a href="mangaPage.html">Manga</a>
+                    <a href="actionFigurePage.html">Action Figures</a>
+                </div>
+            </div>
             <div class="headerlogo">
                 <img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;">
             </div>
             <div class="innerHeaderLinks">
-                <a href="index.html">My Personal Collection</a>
-                <a href="legoPage.html">Lego</a>
-                <a href="funkoPage.html">Funko</a>
-                <a href="mangaPage.html">Manga</a>
-                <a href="actionFigurePage.html">Action Figures</a>
+                <div id="myLinks">
+                    <a href="index.html">My Personal Collection</a>
+                    <a href="legoPage.html">Lego</a>
+                    <a href="funkoPage.html">Funko</a>
+                    <a href="mangaPage.html">Manga</a>
+                    <a href="actionFigurePage.html">Action Figures</a>
+                </div>
             </div>
             <div class="rightHeaderLinks">
                 <img src="assets/user.png" style="max-width: 32px" onclick="dropDownFunc()" class="dropbtn">
@@ -43,38 +56,39 @@
             </div>
         </div>
         <!-------------------------------Slideshow images------------------------------------------------------->
-        <div class="slideshow-container">
-            <div class="mySlides">
-                <div class="numberText">1 / 4</div>
-                <img src="assets/91262.png">
+        <section>
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <div class="numberText">1 / 4</div>
+                    <img src="assets/91262.png">
+                </div>
+                <div class="mySlides">
+                    <div class="numberText">2 / 4</div>
+                    <img src="assets/funko-logo.jpg">
+                </div>
+                <div class="mySlides">
+                    <div class="numberText">3 / 4</div>
+                    <img src="assets/bam.png" class="center">
+                </div>
+                <div class="mySlides">
+                    <div class="numberText">4 / 4</div>
+                    <img src="assets/figma.jpg" class="center">
+                    <img src="assets/shfiguarts.jpg" class="center">
+                </div>
             </div>
-            <div class="mySlides">
-                <div class="numberText">2 / 4</div>
-                <img src="assets/funko-logo.jpg">
+            <!---------------------------------------Next & previous buttons for slideshow--------------------------->
+            <a class="prev" onclick="plusSlides(-1)">&#10094</a> <!--Left arrow-->
+            <a class="next" onclick="plusSlides(1)">&#10095</a>  <!--Right arrow-->
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
             </div>
-            <div class="mySlides">
-                <div class="numberText">3 / 4</div>
-                <img src="assets/bam.png" class="center">
-            </div>
-            <div class="mySlides">
-                <div class="numberText">4 / 4</div>
-                <img src="assets/figma.jpg" class="center">
-                <img src="assets/shfiguarts.jpg" class="center">
-            </div>
-        </div>
-        <!---------------------------------------Next & previous buttons for slideshow--------------------------->
-        <a class="prev" onclick="plusSlides(-1)">&#10094</a> <!--Left arrow-->
-        <a class="next" onclick="plusSlides(1)">&#10095</a>  <!--Right arrow-->
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
-        <br>
-        <br>
-        <br>
-
+            <br>
+            <br>
+            <br>
+        </section>
     </body>
     <!-------------------------------------------Start of Footer-------------------------------------------->
     <footer>

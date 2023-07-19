@@ -1,0 +1,79 @@
+@media screen and (max-width: 1820px) {
+    .filterAndContent {
+        grid-template-columns: 320px auto;
+    }
+}
+@media screen and (max-width: 880px) {
+    .filterAndContent {
+        grid-template-columns: 280px auto;
+    }
+}
+/*--------------------Image grid container for Lego & Funko----------------*/
+@media screen and (max-width: 1620px) {
+    .product-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width: 1260px) {
+    .product-container {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 860px) {
+    .product-container {
+        grid-template-columns: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .filterAndContent {
+        grid-template-columns: 350px;
+    }
+    .product-container {
+        grid-template-columns: auto;
+    }
+}
+/*--------------------Image grid container for Manga----------------*/
+@media screen and (max-width: 1620px) {
+    .manga-product-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width: 1260px) {
+    .manga-product-container {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 860px) {
+    .manga-product-container {
+        grid-template-columns: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .manga-product-container {
+        grid-template-columns: auto;
+    }
+}
+/*--------------------Image grid container for Action Figures----------------*/
+@media screen and (max-width: 1620px) {
+    .actionFigure-product-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width: 1260px) {
+    .actionFigure-product-container {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 860px) {
+    .actionFigure-product-container {
+        grid-template-columns: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .actionFigure-product-container {
+        grid-template-columns: auto;
+    }
+    .combinedFilter {
+        margin-bottom: 1.5rem;
+    }
+}

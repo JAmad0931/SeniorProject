@@ -1,5 +1,11 @@
+h1 {
+    color: rgb(255,255,255, .9);
+    text-align: center;
+    margin-top: 5.5rem;
+    font-weight: lighter;
+}
 section{
-    padding-top: 100px;
+    padding-top: 40px;
     padding-left: 30px;
 }
 /*---------------------Styling for the filter portion -------------------*/
@@ -23,6 +29,7 @@ section{
     display: grid;
     grid-template-columns: auto auto auto auto;
     row-gap: 280px;
+    column-gap: 5px;
 }
 .productBackground {
     background-color: rgb(255,255,255);
@@ -89,6 +96,7 @@ h5, h3 {
     display: grid;
     grid-template-columns: auto auto auto auto;
     row-gap: 320px;
+    column-gap: 5px;
 }
 .mangaImages {
     display: block;
@@ -107,6 +115,7 @@ h5, h3 {
     display: grid;
     grid-template-columns: auto auto auto auto;
     row-gap: 50px;
+    column-gap: 5px;
 }
 .actionFigureImages {
     display: block;
@@ -130,4 +139,11 @@ h5, h3 {
 }
 .actionFigureFooterSpacing{
     margin-top: 2.5rem;
+}
+/*---------------Filter Syling for radio buttons--------------*/
+.filterDiv {
+    display: none;
+}
+.appear {
+    display: block;
 }

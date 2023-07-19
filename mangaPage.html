@@ -14,22 +14,36 @@
 
     <link rel="stylesheet" href="/css/nav&footer.css">
     <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/contentMediaQueries.css">
     <script src="/javascript/dropDown.js"></script>
+    <script src="/javascript/filterFunctions.js"></script>
 
     <title>Manga Collection</title>
 </head>
-<body>
+<body onload="load()">
     <!----------------------Start of Navbar----------------------------------->
     <div class="flex-container">
+        <div class="leftInnerLinks">
+            <img src="assets/menu.png" style="max-width: 32px" class="dropbtn" onclick="burgerDropdown()">
+            <div id="burgerDropdown" class="burgerDropdown-content">
+                <a href="index.html">My Personal Collection</a>
+                <a href="legoPage.html">Lego</a>
+                <a href="funkoPage.html">Funko</a>
+                <a href="mangaPage.html">Manga</a>
+                <a href="actionFigurePage.html">Action Figures</a>
+            </div>
+        </div>
         <div class="headerlogo">
             <img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;">
         </div>
         <div class="innerHeaderLinks">
-            <a href="index.html">My Personal Collection</a>
-            <a href="legoPage.html">Lego</a>
-            <a href="funkoPage.html">Funko</a>
-            <a href="mangaPage.html">Manga</a>
-            <a href="actionFigurePage.html">Action Figures</a>
+            <div id="myLinks">
+                <a href="index.html">My Personal Collection</a>
+                <a href="legoPage.html">Lego</a>
+                <a href="funkoPage.html">Funko</a>
+                <a href="mangaPage.html">Manga</a>
+                <a href="actionFigurePage.html">Action Figures</a>
+            </div>
         </div>
         <div class="rightHeaderLinks">
             <img src="assets/user.png" style="max-width: 32px" onclick="dropDownFunc()" class="dropbtn">
@@ -40,39 +54,40 @@
         </div>
     </div>
     <!-------------------------------Start Filter & Content Page---------------------------->
+    <h1>Manga Collection</h1>
     <section class="filterAndContent">
-        <div>
+        <div class="combinedFilter">
             <div class="filterBackground">
             <!------------------------------Start of Filter------------------------>
                 <h3>Series</h3>
-                <input type="radio" id="all" name="theme">
+                <input type="radio" id="all" name="theme" class="btn" onclick="filterSelection('all')" checked>
                 <label for="all" class="themeWords">Show All</label>
                 <br>
-                <input type="radio" id="csm" name="theme">
+                <input type="radio" id="csm" name="theme" class="btn" onclick="filterSelection('chainsawMan')">
                 <label for="csm" class="themeWords">Chainsaw Man</label>
                 <br>
-                <input type="radio" id="iaah" name="theme">
+                <input type="radio" id="iaah" name="theme" class="btn" onclick="filterSelection('iAmAHero')">
                 <label for="iaah" class="themeWords">I Am A Hero</label>
                 <br>
-                <input type="radio" id="jjk" name="theme">
+                <input type="radio" id="jjk" name="theme" class="btn" onclick="filterSelection('JJK')">
                 <label for="jjk" class="themeWords">Jujutsu Kaisen</label>
                 <br>
-                <input type="radio" id="komi" name="theme">
+                <input type="radio" id="komi" name="theme" class="btn" onclick="filterSelection('komi')">
                 <label for="komi" class="themeWords">Komi Can't Communicate</label>
                 <br>
-                <input type="radio" id="sd" name="theme">
+                <input type="radio" id="sd" name="theme" class="btn" onclick="filterSelection('sakamotoDays')">
                 <label for="sd" class="themeWords">Sakamoto Days</label>
                 <br>
-                <input type="radio" id="sxf" name="theme">
+                <input type="radio" id="sxf" name="theme" class="btn" onclick="filterSelection('spyXFamily')">
                 <label for="sxf" class="themeWords">Spy X Family</label>
                 <br>
-                <input type="radio" id="zom" name="theme">
+                <input type="radio" id="zom" name="theme" class="btn" onclick="filterSelection('zom100')">
                 <label for="zom" class="themeWords">Zom 100: Bucket List of the Dead</label>
             </div>
         </div>
         <!-------------------------------Start of collection items available for Manga---------------------------->
         <div class="manga-product-container"> 
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/1.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 1</h5>
@@ -83,7 +98,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/2.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 2</h5>
@@ -94,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/3.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 3</h5>
@@ -105,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/4.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 4</h5>
@@ -116,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/5.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 5</h5>
@@ -127,7 +142,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/6.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 6</h5>
@@ -138,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/7.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 7</h5>
@@ -149,7 +164,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/8.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 8</h5>
@@ -160,7 +175,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/9.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 9</h5>
@@ -171,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/10.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 10</h5>
@@ -182,7 +197,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv chainsawMan">
                 <img src="assets/manga/chainsawMan/11.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Chainsaw Man <br> Volume: 11</h5>
@@ -194,7 +209,7 @@
                 </div>
             </div>
             <!----------------------I Am A Hero Series-------------------------->
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/1.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 1</h5>
@@ -205,7 +220,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/2.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 2</h5>
@@ -216,7 +231,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/3.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 3</h5>
@@ -227,7 +242,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/4.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 4</h5>
@@ -238,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/5.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 5</h5>
@@ -249,7 +264,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/6.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 6</h5>
@@ -260,7 +275,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/7.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 7</h5>
@@ -271,7 +286,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/8.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 8</h5>
@@ -282,7 +297,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/9.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 9</h5>
@@ -293,7 +308,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/10.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 10</h5>
@@ -304,7 +319,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv iAmAHero">
                 <img src="assets/manga/iAmAHero/11.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: I Am A Hero <br> Volume: 11</h5>
@@ -316,7 +331,7 @@
                 </div>
             </div>
             <!---------------------------Jujutsu Kaisen Content--------------------------------->
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/0.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 0</h5>
@@ -327,7 +342,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/1.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 1</h5>
@@ -338,7 +353,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/2.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 2</h5>
@@ -349,7 +364,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/3.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 3</h5>
@@ -360,7 +375,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/4.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 4</h5>
@@ -371,7 +386,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/5.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 5</h5>
@@ -382,7 +397,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/6.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 6</h5>
@@ -393,7 +408,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/7.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 7</h5>
@@ -404,7 +419,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/8.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 8</h5>
@@ -415,7 +430,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/9.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 9</h5>
@@ -426,7 +441,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/10.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 10</h5>
@@ -437,7 +452,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/11.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 11</h5>
@@ -448,7 +463,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/12.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 12</h5>
@@ -459,7 +474,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/13.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 13</h5>
@@ -470,7 +485,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/14.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 14</h5>
@@ -481,7 +496,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/15.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 15</h5>
@@ -492,7 +507,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/16.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 16</h5>
@@ -503,7 +518,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/17.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 17</h5>
@@ -514,7 +529,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/18.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 18</h5>
@@ -525,7 +540,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/19.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 19</h5>
@@ -536,7 +551,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/20.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 20</h5>
@@ -547,7 +562,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv JJK">
                 <img src="assets/manga/jujutsuKaisen/21.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Jujutsu Kaisen <br> Volume: 21</h5>
@@ -559,7 +574,7 @@
                 </div>
             </div>
             <!----------------------Komi Can't Communicate Content------------------------------------->
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/1.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 1</h5>
@@ -570,7 +585,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/2.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 2</h5>
@@ -581,7 +596,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/3.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 3</h5>
@@ -592,7 +607,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/4.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 4</h5>
@@ -603,7 +618,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/5.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 5</h5>
@@ -614,7 +629,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/6.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 6</h5>
@@ -625,7 +640,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/7.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 7</h5>
@@ -636,7 +651,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/8.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 8</h5>
@@ -647,7 +662,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/9.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 9</h5>
@@ -658,7 +673,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/10.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 10</h5>
@@ -669,7 +684,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/11.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 11</h5>
@@ -680,7 +695,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/12.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 12</h5>
@@ -691,7 +706,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/13.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 13</h5>
@@ -702,7 +717,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/14.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 14</h5>
@@ -713,7 +728,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/15.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 15</h5>
@@ -724,7 +739,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/16.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 16</h5>
@@ -735,7 +750,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/17.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 17</h5>
@@ -746,7 +761,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/18.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 18</h5>
@@ -757,7 +772,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/19.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 19</h5>
@@ -768,7 +783,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/20.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 20</h5>
@@ -779,7 +794,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/21.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 21</h5>
@@ -790,7 +805,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/22.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 22</h5>
@@ -801,7 +816,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/23.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 23</h5>
@@ -812,7 +827,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/24.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 24</h5>
@@ -823,7 +838,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/25.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 25</h5>
@@ -834,7 +849,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv komi">
                 <img src="assets/manga/komiCantCom/26.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Komi Can't Communicate <br> Volume: 26</h5>
@@ -846,7 +861,7 @@
                 </div>
             </div>
             <!-----------------------------Sakamoto Days Content-------------------------------------->
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/1.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 1</h5>
@@ -857,7 +872,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/2.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 2</h5>
@@ -868,7 +883,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/3.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 3</h5>
@@ -879,7 +894,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/4.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 4</h5>
@@ -890,7 +905,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/5.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 5</h5>
@@ -901,7 +916,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/6.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 6</h5>
@@ -912,7 +927,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/7.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 7</h5>
@@ -923,7 +938,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/8.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 8</h5>
@@ -934,7 +949,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv sakamotoDays">
                 <img src="assets/manga/sakamotoDays/9.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Sakamoto Days <br> Volume: 9</h5>
@@ -946,7 +961,7 @@
                 </div>
             </div>
             <!----------------------------------Spy X Family Content------------------------------------->
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/1.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 1</h5>
@@ -957,7 +972,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/2.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 2</h5>
@@ -968,7 +983,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/3.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 3</h5>
@@ -979,7 +994,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/4.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 4</h5>
@@ -990,7 +1005,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/5.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 5</h5>
@@ -1001,7 +1016,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/6.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 6</h5>
@@ -1012,7 +1027,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/7.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 7</h5>
@@ -1023,7 +1038,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/8.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 8</h5>
@@ -1034,7 +1049,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/9.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 9</h5>
@@ -1045,7 +1060,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv spyXFamily">
                 <img src="assets/manga/spyFamily/10.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Spy X Family <br> Volume: 10</h5>
@@ -1057,7 +1072,7 @@
                 </div>
             </div>
             <!------------------------Zom 100 Content--------------------------------------->
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/1.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 1</h5>
@@ -1068,7 +1083,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/2.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 2</h5>
@@ -1079,7 +1094,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/3.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 3</h5>
@@ -1090,7 +1105,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/4.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 4</h5>
@@ -1101,7 +1116,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/5.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 5</h5>
@@ -1112,7 +1127,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/6.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 6</h5>
@@ -1123,7 +1138,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/7.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 7</h5>
@@ -1134,7 +1149,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/8.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 8</h5>
@@ -1145,7 +1160,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/9.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 9</h5>
@@ -1156,7 +1171,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/10.webp" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 10</h5>
@@ -1167,7 +1182,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/11.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 11</h5>
@@ -1178,7 +1193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="productBackground">
+            <div class="productBackground filterDiv zom100">
                 <img src="assets/manga/zom100/12.jpg" class="mangaImages">
                 <div class="imgDesc">
                     <h5>Series: Zom 100: Bucket List of the Dead <br> Volume: 12</h5>

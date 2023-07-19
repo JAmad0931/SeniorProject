@@ -27,7 +27,7 @@ img {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 33%;
+    top: 30%;
     width: auto;
     padding: 10px;
     color: white;
@@ -42,8 +42,98 @@ img {
     right: 35rem;
     border-radius: 5px;
 }
+/*-------------Media Queries for slideshow buttons---------------*/
+@media screen and (max-width: 1840px) {
+    .prev{
+        left: 32rem;
+    }
+    .next {
+        right: 32rem;
+    }
+}
+@media screen and (max-width: 1724px) {
+    .prev{
+        left: 29rem;
+    }
+    .next {
+        right: 29rem;
+    }
+}
+@media screen and (max-width: 1608px) {
+    .prev{
+        left: 26rem;
+    }
+    .next {
+        right: 26rem;
+    }
+}
+@media screen and (max-width: 1492px) {
+    .prev{
+        left: 23rem;
+    }
+    .next {
+        right: 23rem;
+    }
+}
+@media screen and (max-width: 1376px) {
+    .prev{
+        left: 20rem;
+    }
+    .next {
+        right: 20rem;
+    }
+}
+@media screen and (max-width: 1260px) {
+    .prev{
+        left: 17rem;
+    }
+    .next {
+        right: 17rem;
+    }
+}
+@media screen and (max-width: 1144px) {
+    .prev{
+        left: 14rem;
+    }
+    .next {
+        right: 14rem;
+    }
+}
+@media screen and (max-width: 1028px) {
+    .prev{
+        left: 11rem;
+    }
+    .next {
+        right: 11rem;
+    
+    }
+}
+@media screen and (max-width: 912px) {
+    .prev{
+        left: 8rem;
+    }
+    .next {
+        right: 8rem;
+    }
+}
+@media screen and (max-width: 796px) {
+    .prev{
+        left: 5rem;
+    }
+    .next {
+        right: 5rem;
+    }
+}
+@media screen and (max-width: 680px) {
+    .prev{
+        left: 2rem;
+    }
+    .next {
+        right: 2rem;
+    }
+}
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(31,31,31,.8);
 }
 .numberText {
     color: #f2f2f2;
@@ -52,6 +142,14 @@ img {
     position: absolute;
     top: 0;
     z-index: 2;
+}
+@media screen and (max-width:610px) {
+    img {
+        max-width: 250px;
+    }
+    .numberText {
+        padding-top: 7.5rem
+    }
 }
 .dot {
     cursor: pointer;
