@@ -83,18 +83,24 @@ input[type=submit]:hover{
     h1 {
         font-size: xx-large;
         width: 300px;
-        margin-left: 11rem;
+        margin-left: 2rem;
     }
     section{
-        margin-left: 18rem;
+        margin-left: .75rem;
     }
     #accountTxt{
-        margin-left: 14rem;
-        font-size: small;
-        width: 200px;
+        margin-left: 4.5rem;
+        width: 250px;
+    }
+    .form-container{
+        min-width: 250px;
+        
+    }
+    footer{
+        min-width: 0px;
+        min-height: 600px;
     }
 }
-
 /*--------------Login Specific Styling--------------------*/
 .login-form-container{
     background-color: rgb(31, 31, 31);
@@ -115,4 +121,10 @@ input[type=submit]:hover{
 #forgotPass:hover{
     color: rgb(255,255,255, .9);
     cursor: pointer;
+}
+@media screen and (max-width: 375px){
+    .login-form-container{
+        width: 250px;
+        
+    }
 }

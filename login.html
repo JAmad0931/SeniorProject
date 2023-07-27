@@ -14,7 +14,9 @@
 
     <link rel="stylesheet" href="/css/nav&footer.css">
     <link rel="stylesheet" href="/css/registration&login.css">
-    <script src="/javascript/dropDown.js"></script>
+    <script type="module" src="/javascript/dropDown.js"></script>
+    <script type="module" src="/javascript/index.js"></script>
+    <script type="module" src="/javascript/ui.js"></script>
 
     <title>Log In</title>
 </head>
@@ -52,9 +54,9 @@
         </div>
     </div>
     <!--------------------------Start of the form------------------------>
+    <h1>Log In</h1>
    <section>
-        <form action="" method="post" id="registration">
-            <h1>Log In</h1>
+        <form id="registration">
             <div class="login-form-container">
                 <label for="email">Email</label>
                 <br>
@@ -67,7 +69,7 @@
                 <p id="forgotPass">Forgot Password?</p>
             </div>
             <div class="submitBtn">
-                <input type="submit" form="registration" value="Log In">
+                <button type="button" value="Log In" id="btnLogin" onclick="loginEmailPassword()">Log In</button>
             </div>
         </form>
 </section>
