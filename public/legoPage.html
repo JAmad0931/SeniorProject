@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Collectables, funkos, legos, manga, action figures">
+    <meta name="decription" content="Tracker that helps keep track of collectables such as funkos, legos, manga, & action figures">
+    <meta name="author" content="Josue Amador">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <link rel="stylesheet" href="./css/nav&footer.css">
+    <link rel="stylesheet" href="./css/content.css">
+    <link rel="stylesheet" href="./css/contentMediaQueries.css">
+    <script src="./javascript/dropDown.js"></script>
+    <script src="./javascript/filterFunctions.js"></script>
+
+    <title>Lego Collection</title>
+</head>
+<body onload="load()">
+    <!----------------------Start of Navbar----------------------------------->
+    <div class="flex-container">
+        <div class="leftInnerLinks">
+            <img src="assets/menu.png" style="max-width: 32px" class="dropbtn" onclick="burgerDropdown()">
+            <div id="burgerDropdown" class="burgerDropdown-content">
+                <a href="index.html">My Personal Collection</a>
+                <a href="legoPage.html">Lego</a>
+                <a href="funkoPage.html">Funko</a>
+                <a href="mangaPage.html">Manga</a>
+                <a href="actionFigurePage.html">Action Figures</a>
+            </div>
+        </div>
+        <div class="headerlogo">
+            <img src="assets/favicon-32x32.png" style="max-width:100%; height:auto;">
+        </div>
+        <div class="innerHeaderLinks">
+            <div id="myLinks">
+                <a href="index.html">My Personal Collection</a>
+                <a href="legoPage.html">Lego</a>
+                <a href="funkoPage.html">Funko</a>
+                <a href="mangaPage.html">Manga</a>
+                <a href="actionFigurePage.html">Action Figures</a>
+            </div>
+        </div>
+        <div class="rightHeaderLinks">
+            <img src="assets/user.png" style="max-width: 32px" onclick="dropDownFunc()" class="dropbtn">
+            <div id="myDropdown" class="dropdown-content">
+                <a href="registration.html">Create Account</a>
+                <a href="login.html">Log In</a>
+            </div>
+        </div>
+    </div>
+    <!-------------------------------Start Filter & Content Page---------------------------->
+    <h1>Lego Collection</h1>
+    <section class="filterAndContent">
+        <div class="combinedFilter">
+            <div class="filterBackground">
+            <!------------------------------Start of Filter------------------------>
+                <h3>Theme</h3>
+                <input type="radio" id="all" name="theme" class="btn active" onclick="filterSelection('all')" checked>
+                <label for="all" class="themeWords">Show All</label>
+                <br>
+                <input type="radio" id="ninjago" name="theme" class="btn" onclick="filterSelection('ninjago')">
+                <label for="ninjago" class="themeWords">Ninjago</label>
+                <br>
+                <input type="radio" id="icon" name="theme" class="btn" onclick="filterSelection('icons')">
+                <label for="icon" class="themeWords">Icon</label>
+                <br>
+                <input type="radio" id="idea" name="theme" class="btn" onclick="filterSelection('ideas')">
+                <label for="idea" class="themeWords">Ideas</label>
+            </div>
+        </div>
+        <!-------------------------------Start of collection items available for Lego---------------------------->
+        <div class="product-container"> 
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/1.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Ninja Ambush <br> Set #: 2258</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/2.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Skull Motorbike <br> Set #: 2259</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/3.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Ice Dragon Attack <br> Set #: 2260</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/4.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Turbo Shredder <br> Set #: 2263</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/5.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Spinjitzu Dojo <br> Set #: 2504</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/6.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Garmadon's Dark Fortress <br> Set #: 2505</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/7.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Ninja Training Outpost <br> Set #: 2516</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/8.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Nuckal's ATV <br> Set #: 2518</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/9.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Skeleton Bowling <br> Set #: 2519</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/10.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Ninjago Battle Arena <br> Set #: 2520</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/11.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Skull Truck <br> Set #: 2506</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/12.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Fire Temple <br> Set #: 2507</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/13.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Blacksmith Shop <br> Set #: 2508</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/14.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Earth Dragon Defense <br> Set #: 2509</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/15.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Lightning Dragon Battle <br> Set #: 2521</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ninjago">
+                <img src="assets/lego/ninjago/16.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ninjago <br> Name: Mountain Shrine <br> Set #: 2254</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ideas">
+                <img src="assets/lego/ideas/1.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ideas <br> Name: Medieval Blacksmith <br> Set #: 21325 </h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ideas">
+                <img src="assets/lego/ideas/2.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ideas <br> Name: Tree House <br> Set #: 21318</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ideas">
+                <img src="assets/lego/ideas/3.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ideas <br> Name: Motorized Lighthouse <br> Set #: 21335</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ideas">
+                <img src="assets/lego/ideas/4.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ideas <br> Name: Old Fishing Store <br> Set #: 21310</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ideas">
+                <img src="assets/lego/ideas/5.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ideas <br> Name: Ship in a Bottle <br> Set #: 92177</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv ideas">
+                <img src="assets/lego/ideas/6.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Ideas <br> Name: Pirates of Barracuda Bay <br> Set #: 21322</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv icons">
+                <img src="assets/lego/icons/1.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Icons <br> Name: Lion Knights' Castle <br> Set #: 10305</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv icons">
+                <img src="assets/lego/icons/2.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Icons <br> Name: The Lord of the Rings: Rivendell™<br> Set #: 21322</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv icons">
+                <img src="assets/lego/icons/3.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Icons <br> Name: Tranquil Garden <br> Set #: 10315</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv icons">
+                <img src="assets/lego/icons/4.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Icons <br> Name: Bonsai Tree <br> Set #: 10281</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv icons">
+                <img src="assets/lego/icons/5.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Icons <br> Name: Eldorado Fortress <br> Set #: 10320</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="productBackground filterDiv icons">
+                <img src="assets/lego/icons/6.webp" class="images">
+                <div class="imgDesc">
+                    <h5>Theme: Icons <br> Name: Boutique Hotel <br> Set #: 10297</h5>
+                    <div class="innerbuttons">
+                        <button>Add</button>
+                        <br>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<!-------------------------------------------Start of Footer-------------------------------------------->
+<footer class="legoFooterSpacing">
+    <div class="footer-container">
+        <div class="footerNav">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="legoPage.html">Lego</a></li>
+                <li><a href="funkoPage.html">Funko</a></li>
+                <li><a href="mangaPage.html">Manga</a></li>
+                <li><a href="actionFigurePage.html">Action Figures</a></li>
+            </ul>
+        </div>
+        <div class="footerNav">
+            <h4>My Personal Collection</h4>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footerNav">
+            <h4>Account</h4>
+            <ul>
+                <li><a href="registration.html">Create Account</a></li>
+                <li><a href="login.html">Log In</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+</footer>
+</html>
