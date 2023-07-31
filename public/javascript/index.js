@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const loginPassword = txtPassword.value;
 
     const userCredential= await createUserWithEmailAndPassword(auth, loginEmail, loginPassword);
+    redirectSignedIn();
     console.log(userCredential.user);
   }
   btnSignup.addEventListener("click", createAccount);
