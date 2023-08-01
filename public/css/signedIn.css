@@ -1,0 +1,67 @@
+h1 {
+    color: rgb(255,255,255,.9);
+    margin-top: 7.25rem;
+    display: flex;
+    justify-content: center;
+    font-weight: lighter;
+
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+.collection-buttons {
+    background-color: rgb(32,156,238);
+    border: none;
+    padding: 10px 25px;
+    margin-left: 5px;
+    font-family: fantasy, 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: light;
+}
+.collection-buttons:hover{
+    background-color: rgb(32,156,238, .8);
+    cursor: pointer;
+}
+@media screen and (max-width: 375px) {
+    .buttons-container{
+        flex-wrap: wrap;
+    }
+    .collection-buttons{
+        margin-bottom: 5px;
+    }
+}
+/*------------------Signed In Content Styling for Lego-----------------*/
+.signedInproduct-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 280px;
+    column-gap: 20px;
+}
+/*-----------------Signed In Content Media Queries for Lego section---------------*/
+@media screen and (max-width: 1620px) {
+    .signedInproduct-container {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .signedInproduct-container {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media screen and (max-width: 920px) {
+    .signedInproduct-container {
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 560px) {
+    .signedInproduct-container {
+        grid-template-columns: auto;
+    }
+}
+@media screen and (max-width: 375px) {
+    .signedInproduct-container {
+        margin-left: -15px;
+    }
+}
