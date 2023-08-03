@@ -24,3 +24,5 @@ Step 8: Run node_modules/.bin/firebase init emulators. Choose hosting, port 5033
 Step 9: Run node-modules/.bin/firebase emulators:start --only hosting 
 
 Step 10: In a seperate terminal make sure you are in the public directory and run firebase emulators:start --only auth
+
+Step 11: Everything should be running at this point and you can access the app locally
