@@ -1,7 +1,7 @@
 # SeniorProject
 Objective is to create a web app that allows users to keep track of personal collectibles and will be limited to items such as manga, legos, funkos, and action figures.
 
-The app may not run properly if with the connection of the database as I am unsure as so how to allow one to use the database I created without giving important information out.
+The app may not run properly with the connection of the database as I am unsure as to how to allow one to use the database I created without giving important information out.
 
 Instructions for running the App
 
